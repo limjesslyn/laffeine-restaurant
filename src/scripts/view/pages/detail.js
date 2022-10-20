@@ -1,6 +1,7 @@
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import RestaurantSource from '../../data/restaurant-source';
 import UrlParser from '../../routes/url-parser';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonInitiator from '../../utils/like-button-presenter';
 import ReviewInitiator from '../../utils/review-initiator';
 import { createRestaurantDetailTemplate } from '../templates/template-creator';
 
@@ -9,7 +10,6 @@ const Detail = {
     return `
     <div class="content">
       <h2 class="content_heading">Detail Page</h2>
-      <div id="indicator" class="show-indicator"></div>
       <div id="restaurant" class="restaurant"></div>
       <div id="reviewContainer"></div>
       <div id="likeButtonContainer"></div>
@@ -52,6 +52,7 @@ const Detail = {
         rating: response.restaurant.rating,
         customerReviews: response.restaurant.customerReviews,
       },
+      favoriteRestaurant: FavoriteRestaurantIdb,
     });
 
     await ReviewInitiator.init({
