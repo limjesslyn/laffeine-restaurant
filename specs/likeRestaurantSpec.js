@@ -60,13 +60,11 @@ describe('Liking A Restaurant', () => {
     FavoriteRestaurantIdb.deleteRestaurant(1);
   });
 
-  xit('should not add restaurant if no id', async () => {
+  it('should not add restaurant if no id', async () => {
     await LikeButtonInitiator.init({
       likeButtonContainer: document.getElementById('likeButtonContainer'),
       restaurant: {},
     });
-
-    await FavoriteRestaurantIdb.putRestaurant({ id: 1 });
 
     document.getElementById('likeButton').dispatchEvent(new Event('click'));
 
