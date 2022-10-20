@@ -2,7 +2,10 @@ import CONFIG from '../../globals/config';
 
 const createRestaurantHero = `
   <div class="hero" id="hero">
-    <img class='hero-img' src='../images/heros/hero-image_4.jpg' width='100%' height='300px' alt="image">
+    <picture class="hero">
+      <source media="(max-width: 600px)" srcset="../images/hero-image_4-small.jpg" width='100%' height='300px' alt="image">
+      <img class='hero-img' src='./images/hero-image_4-large.jpg' width='100%' height='300px' alt="image">
+    </picture>
     <div class="hero_inner">
           <h2 class="hero_title">Start Your Food Journey Far And Beyond</h2>
           <p class="hero_tagline">Nothing can go wrong with the deliciousness of the world delicacy</p>
