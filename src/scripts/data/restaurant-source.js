@@ -1,29 +1,17 @@
 import API_ENDPOINT from '../globals/api-endpoint';
 
 class RestaurantSource {
-  static clearIndicator() {
-    const indicator = document.querySelector('#indicator');
-
-    if (indicator.classList.contains('show-indicator')) {
-      indicator.classList.remove('show-indicator');
-      indicator.classList.add('hide-indicator');
-    }
-  }
-
   static async listAllRestaurants() {
     try {
       const response = await fetch(API_ENDPOINT.HOME);
       const responseJson = await response.json();
 
       if (responseJson.error) {
-        this.clearIndicator();
         return this.showResponseMessage(responseJson.message);
       }
 
-      this.clearIndicator();
       return responseJson.restaurants;
     } catch (error) {
-      this.clearIndicator();
       return this.showResponseMessage(error);
     }
   }
@@ -34,14 +22,12 @@ class RestaurantSource {
       const responseJson = await response.json();
 
       if (responseJson.error) {
-        this.clearIndicator();
         return this.showResponseMessage(responseJson.message);
       }
 
       this.clearIndicator();
       return responseJson;
     } catch (error) {
-      this.clearIndicator();
       return this.showResponseMessage(error);
     }
   }
