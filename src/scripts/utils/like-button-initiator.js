@@ -26,7 +26,7 @@ const LikeButtonInitiator = {
   _renderLike() {
     this._likeButtonContainer.innerHTML = createLikeRestaurantButtonTemplate();
 
-    const likeButton = document.querySelector('#likeButton');
+    const likeButton = document.getElementById('likeButton');
     likeButton.addEventListener('click', async () => {
       await FavoriteRestaurantIdb.putRestaurant(this._restaurant);
       this._renderButton();
@@ -36,7 +36,7 @@ const LikeButtonInitiator = {
   _renderLiked() {
     this._likeButtonContainer.innerHTML = createUnlikeRestaurantButtonTemplate();
 
-    const likeButton = document.querySelector('#likeButton');
+    const likeButton = document.getElementById('likeButton');
     likeButton.addEventListener('click', async () => {
       await FavoriteRestaurantIdb.deleteRestaurant(this._restaurant.id);
       this._renderButton();
