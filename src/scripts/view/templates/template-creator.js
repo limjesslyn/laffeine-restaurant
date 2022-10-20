@@ -3,7 +3,8 @@ import CONFIG from '../../globals/config';
 const createRestaurantHero = `
   <div class="hero" id="hero">
     <picture class="hero">
-      <source media="(max-width: 600px)" srcset="../images/hero-image_4-small.jpg" width='100%' height='300px' alt="image">
+    <source media="(max-width: 600px)" srcset="../images/hero-image_4-small.jpg" width='100%' height='300px' alt="image">
+    <source media="(max-width: 600px)" srcset="../images/hero-image_4-small.jpg" width='100%' height='300px' alt="image">
       <img class='hero-img' src='./images/hero-image_4-large.jpg' width='100%' height='300px' alt="image">
     </picture>
     <div class="hero_inner">
@@ -53,7 +54,7 @@ const createRestaurantCardTemplate = (restaurant) => `
     <a class='card-detail_link' href='/#/detail/${restaurant.id}'>
         <article class="card-place">
         <div class="card-header">
-            <img class='card-img' src='${CONFIG.BASE_IMAGE_URL_LARGE}${restaurant.pictureId}' alt="image ${restaurant.name}">
+            <img class='lazyload card-img' src='${CONFIG.BASE_IMAGE_URL_LARGE}${restaurant.pictureId}' alt="image ${restaurant.name}">
             <h1>${restaurant.name}</h1>
         </div>
         <div class="card-content">
