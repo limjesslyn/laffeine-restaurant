@@ -1,6 +1,7 @@
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import RestaurantSource from '../../data/restaurant-source';
 import UrlParser from '../../routes/url-parser';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonInitiator from '../../utils/like-button-presenter';
 import ReviewInitiator from '../../utils/review-initiator';
 import { createRestaurantDetailTemplate } from '../templates/template-creator';
 
@@ -52,6 +53,7 @@ const Detail = {
         rating: response.restaurant.rating,
         customerReviews: response.restaurant.customerReviews,
       },
+      favoriteRestaurant: FavoriteRestaurantIdb,
     });
 
     await ReviewInitiator.init({
