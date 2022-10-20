@@ -110,7 +110,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
                     <span class="review-info-person">🧑🏽${el.name}</span>
                     <span class="review-info-date">📅${el.date}</span>
                 </div>
-                <p class="review-desc">"${el.review}"</p>
+                <p class="review-desc">${el.review}</p>
                 </div>
                 `).join(' ')}
             </div>

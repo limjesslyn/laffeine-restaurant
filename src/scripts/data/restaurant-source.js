@@ -25,7 +25,6 @@ class RestaurantSource {
         return this.showResponseMessage(responseJson.message);
       }
 
-      this.clearIndicator();
       return responseJson;
     } catch (error) {
       return this.showResponseMessage(error);

@@ -10,7 +10,6 @@ const Detail = {
     return `
     <div class="content">
       <h2 class="content_heading">Detail Page</h2>
-      <div id="indicator" class="show-indicator"></div>
       <div id="restaurant" class="restaurant"></div>
       <div id="reviewContainer"></div>
       <div id="likeButtonContainer"></div>

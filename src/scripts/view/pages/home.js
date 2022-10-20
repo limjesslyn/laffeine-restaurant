@@ -14,7 +14,6 @@ const Home = {
        ${createRestaurantHeroSkeleton}
       </div>
       <h2 class="content_heading">Home Page</h2>
-      <div id="indicator" class="show-indicator"></div>
       <div id="restaurants" class="restaurants">
         ${createRestaurantCardSkeleton(20)}
       </div>
