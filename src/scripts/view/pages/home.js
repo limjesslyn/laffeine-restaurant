@@ -23,7 +23,6 @@ const Home = {
 
   async afterRender() {
     const heroContainer = document.getElementById('heroContent');
-    // heroContainer.innerHTML = '';
     heroContainer.innerHTML = createRestaurantHero;
 
     const restaurants = await RestaurantSource.listAllRestaurants();

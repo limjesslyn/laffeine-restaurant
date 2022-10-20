@@ -12,6 +12,7 @@
     "test": "karma start",
     "build-image": "node sharp.js",
     "e2e": "codeceptjs run --steps"
+
   },
   "keywords": [],
   "author": "Jesslyn",
@@ -24,6 +25,7 @@
     "codeceptjs": "^3.3.6",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.2.2",
     "eslint": "^8.24.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
