@@ -54,7 +54,7 @@ const createRestaurantCardTemplate = (restaurant) => `
     <a class='card-detail_link' href='/#/detail/${restaurant.id}'>
         <article class="card-place">
         <div class="card-header">
-            <img class='lazyload card-img' src='${CONFIG.BASE_IMAGE_URL_LARGE}${restaurant.pictureId}' alt="image ${restaurant.name}">
+            <img class='lazyload card-img' src="../images/placeholder.jpg" data-src='${CONFIG.BASE_IMAGE_URL_LARGE}${restaurant.pictureId}' width='100%' height='300px' alt="image ${restaurant.name}">
             <h1>${restaurant.name}</h1>
         </div>
         <div class="card-content">
@@ -110,7 +110,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
                     <span class="review-info-person">🧑🏽${el.name}</span>
                     <span class="review-info-date">📅${el.date}</span>
                 </div>
-                <p class="review-desc">"${el.review}"</p>
+                <p class="review-desc">${el.review}</p>
                 </div>
                 `).join(' ')}
             </div>
@@ -122,13 +122,13 @@ const createRestaurantDetailTemplate = (restaurant) => `
 `;
 
 const createLikeRestaurantButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
+  <button aria-label="like this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
 
 const createUnlikeRestaurantButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
+  <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;

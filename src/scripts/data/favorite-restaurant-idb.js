@@ -1,6 +1,5 @@
 import { openDB } from 'idb';
 import CONFIG from '../globals/config';
-import RestaurantSource from './restaurant-source';
 
 const { DATABASE_NAME, DATABASE_VERSION, OBJECT_STORE_NAME } = CONFIG;
 
@@ -12,15 +11,20 @@ const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
 
 const FavoriteRestaurantIdb = {
   async getRestaurant(id) {
+    if (!id) {
+      return;
+    }
     return (await dbPromise).get(OBJECT_STORE_NAME, id);
   },
 
-  async getAllRestaurant() {
-    RestaurantSource.clearIndicator();
+  async getAllRestaurants() {
     return (await dbPromise).getAll(OBJECT_STORE_NAME);
   },
 
   async putRestaurant(restaurant) {
+    if (!restaurant.hasOwnProperty('id')) {
+      return;
+    }
     return (await dbPromise).put(OBJECT_STORE_NAME, restaurant);
   },
 
