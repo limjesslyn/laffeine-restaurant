@@ -2,9 +2,7 @@
 ---
 
 to start :
-- run build
-- run build-image
-- run serve
+- run build-serve
 
 to test :
 - run test
