@@ -11,8 +11,8 @@
     "lint": "eslint ./src",
     "test": "karma start",
     "build-image": "node sharp.js",
-    "e2e": "codeceptjs run --steps"
-
+    "e2e": "codeceptjs run --steps",
+    "bundle-report" : "webpack-bundle-analyzer --port 3000 dist/stats.json"
   },
   "keywords": [],
   "author": "Jesslyn",
