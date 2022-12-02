@@ -4,7 +4,6 @@ const createRestaurantHero = `
   <div class="hero" id="hero">
     <picture class="hero">
     <source media="(max-width: 600px)" srcset="../images/hero-image_4-small.jpg" width='100%' height='300px' alt="image">
-    <source media="(max-width: 600px)" srcset="../images/hero-image_4-small.jpg" width='100%' height='300px' alt="image">
       <img class='hero-img' src='./images/hero-image_4-large.jpg' width='100%' height='300px' alt="image">
     </picture>
     <div class="hero_inner">
